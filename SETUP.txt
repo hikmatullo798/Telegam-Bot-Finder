@@ -1,0 +1,145 @@
+# 🤖 Bot Finder - Yangilangan O'rnatish Qo'llanmasi
+
+## 🔥 Yangi Xususiyatlar
+
+1. **🔍 Bot izlash** - a'zolar soniga qarab
+2. **🤖 Avtomatik yuborish** - 10 daqiqada bot topib yuborish
+3. **⚙️ Avtomatik boshqarish** - on/off funksiyasi
+4. **📊 To'liq statistika** - yuborilgan botlar hisoboti
+5. **🔎 Yo'nalish izlash** - kategoriya bo'yicha filter
+6. **🎯 Manual tanlash** - topilgan botlardan tanlash
+
+## 1️⃣ Bot yaratish (@BotFather)
+
+1. Telegram'da **@BotFather**'ga boring
+2. `/newbot` buyrug'ini yuboring
+3. Bot nomini kiriting: `Foydali Botlar Kanali`
+4. Bot username'ini kiriting: `foydali_botlar_bot`
+5. **Token**ni nusxalab oling (masalan: `1234567890:ABCdefGHI...`)
+
+## 2️⃣ Kanal yaratish
+
+1. Telegram'da yangi **kanal** yarating
+2. Kanal nomini o'rnating: `Foydali Botlar`
+3. Kanal username'ini o'rnating: `foydali_botlar_kanali`
+4. Botni kanalga **admin** qilib qo'shing (muhim!)
+
+## 3️⃣ O'zingizning Telegram ID'ingizni olish
+
+1. **@userinfobot**'ga boring
+2. `/start` yuboring
+3. Sizning **ID raqamingiz**ni nusxalab oling (masalan: `123456789`)
+
+## 4️⃣ Bot kodini sozlash
+
+`bot.py` faylida quyidagi qatorlarni o'zgartiring:
+
+```python
+BOT_TOKEN = "1234567890:ABCdefGHI..."  # BotFather'dan olgan token
+CHANNEL_ID = "@foydali_botlar_kanali"  # Sizning kanal username'i
+ADMIN_ID = 123456789                   # Sizning Telegram ID
+```
+
+## 5️⃣ Bot ishga tushirish
+
+### Kutubxonalar o'rnatish
+```bash
+pip install aiogram aiohttp
+```
+
+### Botni ishga tushirish
+```bash
+python bot.py
+```
+
+## 6️⃣ Yangi Xususiyatlarni sinash
+
+### 🔍 Bot Izlash:
+1. `/start` yuboring
+2. **"🔍 Bot izlash"** tugmasini bosing
+3. Izlash turini tanlang:
+   - **Kalit so'z** - ma'lumotlar bazasidan
+   - **Kategoriya** - yo'nalish bo'yicha
+   - **Telegram'dan** - yangi botlar topish
+
+### 🤖 Avtomatik Yuborish:
+1. **"⚙️ Sozlamalar"** tugmasini bosing
+2. **"Avtomatik yuborish"** tugmasini bosing
+3. **🟢 Yoqilgan** / **🔴 O'chiq** holatini ko'rasiz
+
+### 📊 Statistika:
+1. **"📊 Statistika"** tugmasini bosing
+2. To'liq hisobot ko'rasiz:
+   - Botlar soni
+   - A'zolar soni
+   - Yuborishlar statistikasi
+
+### 🔎 Yo'nalish Izlash:
+1. **"🔎 Yo'nalish bo'yicha izlash"** tugmasini bosing
+2. Kategoriya tanlang
+3. Topilgan botlardan birini tanlang
+
+## ✅ Bot Ishlash Rejimi
+
+### Avtomatik:
+- **10 daqiqada** bir marta avtomatik bot yuboradi
+- Eng ko'p a'zoli botlarni tanlaydi
+- **On/Off** qilib boshqarish mumkin
+
+### Manual:
+- Siz o'zingiz bot izlab topasiz
+- Topilgan botlardan tanlaysiz
+- Tanlagan botingiz kanalga yuboriladi
+
+## 🚨 Muammolarni Hal Qilish
+
+### Bot javob bermayapti:
+- **Token** to'g'ri ekanligini tekshiring
+- **Internet** aloqasini tekshiring
+- Bot faylini qayta ishga tushiring
+
+### Kanalga yubormayapti:
+- Bot **kanalda admin** ekanligini tekshiring
+- **Kanal ID** to'g'ri ekanligini tekshiring
+- Kanal **ochiq** (private emas) ekanligini tekshiring
+
+### Python xatoligi:
+```bash
+pip install --upgrade aiogram aiohttp
+```
+
+### Database xatoligi:
+- `bots.db` faylini o'chiring
+- Botni qayta ishga tushiring
+
+## 📱 Telegram UI Boshqaruv
+
+Botning barcha funksiyalari **Telegram tugmalari** orqali boshqariladi:
+
+### Asosiy Menu:
+- 🔍 **Bot izlash** - yangi botlar topish
+- 📊 **Statistika** - to'liq hisobot
+- 📋 **Botlar ro'yxati** - barcha botlar
+- 🚀 **Test yuborish** - kanalga test post
+- ⚙️ **Sozlamalar** - bot sozlamalari
+- 🔎 **Yo'nalish izlash** - kategoriya filter
+
+### Izlash Turlari:
+- 🔍 **Kalit so'z** - nom bo'yicha izlash
+- 📂 **Kategoriya** - yo'nalish bo'yicha
+- 🎯 **Telegram'dan** - yangi botlar topish
+
+### Sozlamalar:
+- 🤖 **Avtomatik yuborish** - on/off
+- ⏰ **Yuborish vaqti** - interval sozlash
+- 📊 **Statistika** - yuborilgan botlar
+
+## 🎉 Yakuniy Natija
+
+Bot to'liq **Telegram UI** orqali boshqariladi:
+- **Manual izlash** va yuborish
+- **Avtomatik** bot topish va yuborish
+- **To'liq statistika** va boshqaruv
+- **A'zolar soniga** qarab eng yaxshi botlar
+
+**Bot tayyor! 5 daqiqada professional bot kanalingiz bor! 🚀**
