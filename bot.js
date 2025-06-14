@@ -554,8 +554,13 @@ bot.on('callback_query', async (callbackQuery) => {
     const userId = callbackQuery.from.id;
     const data = callbackQuery.data;
     
-    // Callback query'ni darhol acknowledge qilish
-    bot.answerCallbackQuery(callbackQuery.id);
+    // Callback query'ni darhol acknowledge qilish (xatolikni handle qilish bilan)
+    try {
+        await bot.answerCallbackQuery(callbackQuery.id);
+    } catch (error) {
+        // Agar callback query eskirgan yoki noto'g'ri bo'lsa, xatolikni log qilamiz va davom etamiz
+        console.log('⚠️ Callback query acknowledge xatoligi:', error.message);
+    }
     
     // Faqat admin uchun
     if (userId !== ADMIN_ID) {
