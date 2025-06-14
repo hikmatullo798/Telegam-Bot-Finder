@@ -554,9 +554,12 @@ bot.on('callback_query', async (callbackQuery) => {
     const userId = callbackQuery.from.id;
     const data = callbackQuery.data;
     
+    // Callback query'ni darhol acknowledge qilish
+    bot.answerCallbackQuery(callbackQuery.id);
+    
     // Faqat admin uchun
     if (userId !== ADMIN_ID) {
-        bot.answerCallbackQuery(callbackQuery.id, '❌ Ruxsat yo\'q');
+        bot.sendMessage(chatId, '❌ Bu bot faqat admin uchun mo\'ljallangan');
         return;
     }
     
@@ -755,7 +758,7 @@ bot.on('callback_query', async (callbackQuery) => {
                 .single();
             
             if (error || !channel) {
-                bot.answerCallbackQuery(callbackQuery.id, '❌ Kanal topilmadi');
+                bot.sendMessage(chatId, '❌ Kanal topilmadi');
                 return;
             }
             
@@ -831,8 +834,6 @@ ${sourceIcon} <b>Manba:</b> ${sourceName}
             }
         );
     }
-    
-    bot.answerCallbackQuery(callbackQuery.id);
 });
 
 // Xabarlarni qayta ishlash
